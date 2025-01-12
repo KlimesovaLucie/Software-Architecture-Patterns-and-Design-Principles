@@ -1,3 +1,5 @@
+# Model-View-Presenter
+
 ## Pattern Description
 The Model-View-Presenter (MVP) [^1] pattern represents a variation of the Model-View-Controller pattern. In this variation, the presenter assumes a role analogous to that of the Controller, although with some notable distinctions. Namely, the Presenter is responsible for all presentation logic and is also closely bound to a specific View.
 
@@ -5,7 +7,9 @@ Furthermore, the utilisation of the View and Presenter interfaces also facilitat
 
 ## Topology
 The Model-View-Presenter pattern comprises three components: the Model, the View, and the Presenter. Figure 1 illustrates the dependencies between these components.
-![MVP_literature|300](./Diagrams/MVP_literature.png)
+
+<img src="./Diagrams/MVP_literature.png" width="300"/>
+
 **Figure 1:** The components of Model-View-Presenter.
 
 **Model** The Model contains data and business logic. It then triggers data change notifications after changes are made to its data.
@@ -18,7 +22,8 @@ If the user performs an action in the View, the View raises an event that is han
 
 In contrast to the Model-View-Controller pattern, the View and Presenter are more closely linked. The input is also received by the View, rather than the Controller. Furthermore, the View does not interact with the Model directly.
 
-![MVP_annotate|300](./Diagrams/MVP_annotate.png)
+<img src="./Diagrams/MVP_annotate.png" width="300"/>
+
 **Figure 2:** Detailed view of component interaction.
 
 Other variations of this pattern can also be encountered. The variant depicted in Figure 2 is designated as the Passive View [^2]. If there would be interaction between the View and the Model, but solely for the purpose of receiving notifications of data changes in the Model, this variant is designated as the Supervising Controller [^3]. In this case, the data binding [^4] concept is employed to retrieve data.
