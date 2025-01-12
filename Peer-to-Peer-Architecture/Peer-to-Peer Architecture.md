@@ -1,3 +1,5 @@
+# Peer-to-Peer Architecture
+
 ## Pattern Description
 The Peer-to-Peer (P2P) [^1][^2] Architecture characterizes a distributed architecture consisting of individual peers that collectively provide and use resources. All components are equally important and none are critical to the operation of the system.
 
@@ -5,7 +7,7 @@ The system has good scalability, but managing data consistency can be challengin
 ## Topology
 The Peer-to-Peer Architecture is composed of multiple peers. In contrast to Client-Server Architecture, peers function as both a client and a server. Figure 1 illustrates how peers can communicate with one another.
 
-![PeerToPeerLiterature|300](./Diagrams/PeerToPeer_literature.png)
+<img src="./Diagrams/PeerToPeer_literature.png" width="300"/>
 
 **Figure 1:** The components of Peer-to-Peer Architecture and their possible communication.
 
