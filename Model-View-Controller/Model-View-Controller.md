@@ -1,3 +1,5 @@
+# Model-View-Controller
+
 ## Pattern Description
 The Model-View-Controller (MVC) [^1] architecture is one of the most well-known. This pattern enables the separation of data definition and presentation. It is commonly used in developing graphical user interface applications, particularly in web development.
 
@@ -5,7 +7,9 @@ Separating data presentation from definition allows data to be presented to the 
 
 ## Topology
 The Model-View-Controller architecture comprises three components: the Model, the View, and the Controller. Figure 1 displays the relationships between them.
-![MVCLiterature|250](./Diagrams/MVC_literature.png)
+
+<img src="./Diagrams/MVC_literature.png" width="250"/>
+
 **Figure 1:** The components of Model-View-Controller.
 
 **Model** The Model contains data and business logic. This data represent information from a specific domain.
@@ -17,13 +21,15 @@ The Model-View-Controller architecture comprises three components: the Model, th
 
 When the user interacts with the View, the View does not directly modify the data in the Model. Instead, this input is received by the Controller, which then interacts with the corresponding Model and can modify the data in it. The Controller may select other Views to display to the user or update the same View with new data. Figure 2 illustrates this interaction. The Model utilizes the publish-subscribe pattern [^2], to notify the View and Controller of any data changes. Thus, the binding between the View and Model is solely for this purpose.
 
-![MVCAnnotate|300](./Diagrams/MVC_annotate.png)
+<img src="./Diagrams/MVC_annotate.png" width="300"/>
+
 **Figure 2:** The communication of the components of Model-View-Controller.
 
 
 Figure 3 illustrates an example of Model-View-Controller in a class diagram representing a simple page where the teacher inputs grades for a student. Upon saving the entered grade, the average is recalculated and the corresponding view is updated.
 
-![MVC_class|400](./Diagrams/MVC_class.png)
+<img src="./Diagrams/MVC_class.png" width="400"/>
+
 **Figure 3:** An example of the Model-View-Controller captured in a class diagram.
 
 ## Model-View-Controller in Industry
