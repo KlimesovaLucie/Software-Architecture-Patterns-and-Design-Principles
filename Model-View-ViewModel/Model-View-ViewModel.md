@@ -1,3 +1,5 @@
+# Model-View-ViewModel
+
 ## Pattern Description
 The Model-View-ViewModel (MVVM) [^1][^2] architecture is a variation of the Model-View-Controller. Its purpose is to separate the presentation and business logic.
 
@@ -5,7 +7,9 @@ This separation improves testability and maintainability and facilitates the rep
 
 ## Topology
 The Model-View-ViewModel architecture consists of three components: the View, the ViewModel, and the Model. Figure 1 displays the relationships between them.
-![MVVM_literature|400](./Diagrams/MVVM_literature.png)
+
+<img src="./Diagrams/MVVM_literature.png" width="400"/>
+
 **Figure 1:** The components of Model-View-ViewModel.
 
 **View** The View encapsulates the user interface (UI) and UI logic [^2]. It contains the definition of the components of the graphical user interface. It is defined using a declarative language such as XAML. The View does not contain any business logic and only interacts with the ViewModel.
@@ -17,7 +21,8 @@ The Model-View-ViewModel architecture consists of three components: the View, th
 
 The View, the ViewModel, and the Model communicate with each other in such a way that the View communicates with the ViewModel and the ViewModel communicates with the Model. The Model is unaware of which ViewModel is communicating with it, and the ViewModel is unaware of which View is interacting with it. The Model has no knowledge of which View represents its data. Their communication is illustrated in Figure 2.
 
-![MVVM_annotate|400](./Diagrams/MVVM_annotate.png)
+<img src="./Diagrams/MVVM_annotate.png" width="400"/>
+
 **Figure 2:** The communication between Model-View-ViewModel components.
 
 
@@ -28,7 +33,8 @@ The Model-View-ViewModel is a more specific pattern than the Model-View-Controll
 
 Figure 3 illustrates an example of the Model-View-ViewModel pattern in the form of a class diagram. It depicts a page that displays a list of recipes and a search box. Upon the user entering a search query, the *searchRecipeCommand* is invoked, which stores the search result in the *searchedRecipes* property. The *RecipesViewModel* class is derived from the *BaseViewModel* class, which implements the *INotifyPropertyChanged* interface. This enables the *RecipesViewModel* class to raise a change event when the *searchedRecipes* property changes. The *RecipesView* class is then informed of the change, after which it displays the retrieved recipes to the user.
 
-![MVVM_class|600](./Diagrams/MVVM_class.png)
+<img src="./Diagrams/MVVM_class.png" width="600"/>
+
 **Figure 3:** An example of Model-View-ViewModel captured in class diagram.
 ## Model-View-ViewModel in Industry
 A common violation in practice is the direct storage of a reference to the Model in the View, without the use of the ViewModel. In many cases, business logic is often contained in ViewModels, rather than in Models.
