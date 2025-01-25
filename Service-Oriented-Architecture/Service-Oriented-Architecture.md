@@ -10,25 +10,25 @@ The Service-Oriented Architecture can have many variations in its topology, maki
 
 To avoid direct communication, an API layer can be added, as illustrated in Figure 2. The user interface communicates solely with the API layer, which queries data from each service and caches the received data.
 
-<img src="./Diagrams/SOA_literature.png" width="250"/>
+<img src="./Diagrams/SOA_literature.png" width="300"/>
 
 **Figure 1:** The most basic form of Service-Oriented Architecture [^1].
 
 The user interface can be divided into multiple sections to match different domains. It is possible to split a single database into multiple databases according to services. Example of multiple databases is shown in Figure 2.
 
-<img src="./Diagrams/SOA_literature_API.png" width="250"/>
+<img src="./Diagrams/SOA_literature_API.png" width="300"/>
 
 **Figure 2:** Service-Oriented Architecture with API Layer and multiple databases.
 
 The design of services is typically based on a Layered Architecture or Modular Monolith [^3], which always includes an API layer. Figure 3 illustrates an example of using the Layered Architecture. The user interface communicates solely with the API layer of the service. The API layer, in turn, communicates with the Business layer, followed by the Persistent layer, and finally the database.
 
-<img src="./Diagrams/SOA_annotate.png" width="300"/>
+<img src="./Diagrams/SOA_annotate.png" width="400"/>
 
 **Figure 3:** The architecture of the service adheres to Layered Architecture.
 
 Diagram 4 illustrates an example of a Service-Oriented Architecture in the form of a class diagram, specifically the Order service within the Ordering system. The *OrderController* class represents the input class for creating an order, which is then processed by a series of services, including those responsible for payment and item management within the warehouse.
 
-<img src="./Diagrams/SOA_class.png" width="350"/>
+<img src="./Diagrams/SOA_class.png" width="450"/>
 
 **Figure 4:** An example of Service-Oriented Architecture captured in class diagram.
 
